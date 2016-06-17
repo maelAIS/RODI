@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RotarienVersRodiClubs.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="conn" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=;Initial Catalog=;User ID=;Password=</Value>
+    </Setting>
+    <Setting Name="dir_source" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Dossiers\RODI\rodi.ftp</Value>
+    </Setting>
+    <Setting Name="dir_filter" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">district_1730_club*.txt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

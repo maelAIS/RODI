@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Mail_Test">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Mail_TestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Mail_TestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Newsletter_P">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Newsletter_PResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Newsletter_PResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Newsletter_E">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Newsletter_EResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Newsletter_EResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Mail_TestSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Mail_Test" />
+  </wsdl:message>
+  <wsdl:message name="Get_Mail_TestSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Mail_TestResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Newsletter_PSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Newsletter_P" />
+  </wsdl:message>
+  <wsdl:message name="Get_Newsletter_PSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Newsletter_PResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Newsletter_ESoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Newsletter_E" />
+  </wsdl:message>
+  <wsdl:message name="Get_Newsletter_ESoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Newsletter_EResponse" />
+  </wsdl:message>
+  <wsdl:portType name="NewsletterWSSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Mail_Test">
+      <wsdl:input message="tns:Get_Mail_TestSoapIn" />
+      <wsdl:output message="tns:Get_Mail_TestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Newsletter_P">
+      <wsdl:input message="tns:Get_Newsletter_PSoapIn" />
+      <wsdl:output message="tns:Get_Newsletter_PSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Newsletter_E">
+      <wsdl:input message="tns:Get_Newsletter_ESoapIn" />
+      <wsdl:output message="tns:Get_Newsletter_ESoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NewsletterWSSoap" type="tns:NewsletterWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Mail_Test">
+      <soap:operation soapAction="http://tempuri.org/Get_Mail_Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Newsletter_P">
+      <soap:operation soapAction="http://tempuri.org/Get_Newsletter_P" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Newsletter_E">
+      <soap:operation soapAction="http://tempuri.org/Get_Newsletter_E" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NewsletterWSSoap12" type="tns:NewsletterWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Mail_Test">
+      <soap12:operation soapAction="http://tempuri.org/Get_Mail_Test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Newsletter_P">
+      <soap12:operation soapAction="http://tempuri.org/Get_Newsletter_P" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Newsletter_E">
+      <soap12:operation soapAction="http://tempuri.org/Get_Newsletter_E" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NewsletterWS">
+    <wsdl:port name="NewsletterWSSoap" binding="tns:NewsletterWSSoap">
+      <soap:address location="http://localhost:9999/ais/newsletter.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NewsletterWSSoap12" binding="tns:NewsletterWSSoap12">
+      <soap12:address location="http://localhost:9999/ais/newsletter.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

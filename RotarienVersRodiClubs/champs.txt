@@ -1,0 +1,13 @@
+cric
+name
+adress_1
+adress_2
+adress_3
+zip
+town
+telephone
+fax
+email
+
+
+former_presidents

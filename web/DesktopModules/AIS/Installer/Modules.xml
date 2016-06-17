@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<site>
+	<tabs>
+		<tab name="AARD" visible="true" superTab="true"></tab>
+		<tab name="Kev" visible="true" superTab="true"></tab>
+		<tab name="Installer" visible="true" superTab="true"></tab>
+		<tab name="Liste Membre" visible="true" superTab="false"></tab>
+		<tab name="Présentation Membre" visible="false" superTab="false" parent="Liste Membre" dependency="Liste Membre"></tab>
+		<tab name="Test" visible="true" superTab="true"></tab>
+	</tabs>
+	<modules>
+		<module friendlyName="AIS AARD" tab="AARD"></module>
+		<module friendlyName="AIS Admin Club" tab="AARD"></module>
+		<module friendlyName="AIS Admin News Kev" tab="Kev"></module>
+		<module friendlyName="AIS_Installer" tab="Installer"></module>
+		<!--<module friendlyName="AIS News Visu" tab="Membre" Key1="category" Value1="Clubs" Key2="tags_excluded" Value2="Bulletin" Key3="tabid" Value3="Les Nouvelles" Key4="nbnews" Value4="6"></module>-->
+		<module friendlyName="AIS Page Membre" tab="Présentation Membre"></module>
+		<module friendlyName="AIS Membres Liste" tab="Liste Membre" Key1="presentationtabid" Value="Présentation Membre" ></module>
+		
+	</modules>
+	<permissions>
+		<permission role="Administrateur Club" View="true" Edit="false" tab="AARD"></permission>
+	</permissions>
+</site>
